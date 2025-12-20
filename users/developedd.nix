@@ -1,4 +1,4 @@
-# users/progressedd.nix
+# users/developedd.nix
 { config, pkgs, home-manager, plasma-manager, lib, ... }:
 
 let

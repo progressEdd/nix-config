@@ -13,9 +13,6 @@
     hidden-bar
     rectangle
   ];
-  # Enable nix-daemon
-  services.nix-daemon.enable = true;
-
   # Enable Fish shell support
   programs.fish.enable = true;
 
