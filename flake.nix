@@ -1,6 +1,9 @@
 {
   inputs = {
     nixpkgs.url        = "github:NixOS/nixpkgs/nixos-unstable";
+    nix-darwin.url     = "github:LnL7/nix-darwin";
+    nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+    nix-homebrew.url   = "github:zhaofengli-wip/nix-homebrew";
     home-manager.url   = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     plasma-manager.url = "github:nix-community/plasma-manager";
@@ -9,7 +12,7 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware";
   };
 
-  outputs = { self, nixpkgs, home-manager, plasma-manager, nixos-hardware, ... }:
+  outputs = { self, nixpkgs, nix-darwin, nix-homebrew, home-manager, plasma-manager, nixos-hardware, ... }:
 
   let
     # your machines:
@@ -20,7 +23,7 @@
     defaultSystem = "x86_64-linux";
 
     modules       = import ./modules;
-    mkSpecialArgs = { inherit modules home-manager plasma-manager nixos-hardware; };
+    mkSpecialArgs = { inherit modules home-manager plasma-manager nixos-hardware nix-homebrew; };
 
     # ← move it here
     systems       = [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
@@ -31,6 +34,13 @@
         system     = defaultSystem;
         modules    = [ ./machines/${host}/default.nix ]
                      ++ nixpkgs.lib.optionals (defaultSystem == "x86_64-linux") [ modules.kde ];
+        specialArgs = mkSpecialArgs // { inherit host; };
+      });
+
+    darwinConfigurations = nixpkgs.lib.genAttrs hostNames (host:
+      nix-darwin.lib.darwinSystem {
+        system  = "aarch64-darwin";  # or "x86_64-darwin" for Intel Macs
+        modules = [ ./machines/${host}/default.nix ];
         specialArgs = mkSpecialArgs // { inherit host; };
       });
 

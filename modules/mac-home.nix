@@ -1,0 +1,168 @@
+# modules/mac-home.nix - Home Manager configuration for macOS users
+{ pkgs, ... }:
+
+{
+  # macOS-specific home packages (already have some in development.nix)
+  home.packages = with pkgs; [
+    cmake
+  ];
+  # System packages for macOS
+  environment.systemPackages = with pkgs; [
+    imagemagick
+    darwin.lsusb
+  ];
+  # Enable nix-daemon
+  services.nix-daemon.enable = true;
+  
+  # Enable Fish shell support
+  programs.fish.enable = true;
+
+  # macOS-specific settings
+  system.stateVersion = 5;
+  nixpkgs.hostPlatform = "aarch64-darwin";
+  nixpkgs.config.allowUnfree = true
+
+  security.sudo.extraConfig = ''
+    # Set timeout to 1 hour (60 minutes)
+    Defaults timestamp_timeout=60
+  '';
+  system.keyboard.enableKeyMapping = true;
+
+  # Configure macOS system defaults
+  system.defaults = {
+  CustomUserPreferences = {
+    "NSGlobalDomain" = {
+      "AppleInterfaceStyle" = "Dark";
+      "AppleKeyboardUIMode" = 0;
+      "AppleMenuBarFontSize" = "large";
+      "AppleMenuBarVisibleInFullscreen" = 1;
+      "AppleMiniaturizeOnDoubleClick" = 0;
+      "AppleShowAllExtensions" = 1;
+      "AppleShowAllFiles" = 1;
+      "AppleShowScrollBars" = "Always";
+      "AppleSpacesSwitchOnActivate" = 1;
+      "AppleWindowTabbingMode" = "always";
+      "ContextMenuGesture" = 1;
+      "InitialKeyRepeat" = 30;
+      "KeyRepeat" = 2;
+      "NSAutomaticCapitalizationEnabled" = 0;
+      "NSAutomaticDashSubstitutionEnabled" = 0;
+      "NSAutomaticInlinePredictionEnabled" = 0;
+      "NSAutomaticPeriodSubstitutionEnabled" = 0;
+      "NSAutomaticQuoteSubstitutionEnabled" = 0;
+      "NSAutomaticSpellingCorrectionEnabled" = 0;
+      "NSQuitAlwaysKeepsWindows" = 1;
+      "NavPanelFileListModeForOpenMode" = 1;
+      "WebAutomaticSpellingCorrectionEnabled" = 0;
+      "com.apple.keyboard.fnState" = 1;
+      "com.apple.mouse.doubleClickThreshold" = "0.15";
+      "com.apple.mouse.linear" = 0;
+      "com.apple.mouse.scaling" = "0.6875";
+      "com.apple.scrollwheel.scaling" = "0.1838";
+      "com.apple.sound.beep.flash" = 0;
+      "com.apple.sound.beep.volume" = 1;
+      "com.apple.springing.delay" = "0.5";
+      "com.apple.springing.enabled" = 0;
+      "com.apple.swipescrolldirection" = 0;
+      "com.apple.trackpad.forceClick" = 0;
+      "com.apple.trackpad.scaling" = "0.875";
+    };
+
+    "com.apple.dock" = {
+      "autohide" = 1;
+      "expose-group-apps" = 0;
+      "launchanim" = 0;
+      "mru-spaces" = 0;
+      "orientation" = "right";
+      "show-process-indicators" = 0;
+      "show-recents" = 0;
+      "tilesize" = 38;
+      "trash-full" = 1;
+      "wvous-br-corner" = 1;
+      "wvous-br-modifier" = 0;
+    };
+
+    "com.apple.screencapture" = {
+      "disable-shadow" = 1;
+      "location-last" = "~/Pictures/screenshots";
+      "showsCursor" = 1;
+      "target" = "clipboard";
+    };
+
+    "com.apple.menuextra.clock" = {
+      "IsAnalog" = 0;
+      "ShowAMPM" = 0;
+      "ShowDate" = 2;
+      "ShowDayOfWeek" = 1;
+    };
+
+    "com.apple.WindowManager" = {
+      "AppWindowGroupingBehavior" = 1;
+      "AutoHide" = 1;
+      "EnableStandardClickToShowDesktop" = 0;
+      "EnableTiledWindowMargins" = 0;
+      "EnableTilingByEdgeDrag" = 0;
+      "EnableTilingOptionAccelerator" = 0;
+      "EnableTopTilingByEdgeDrag" = 0;
+      "GloballyEnabled" = 0;
+      "HideDesktop" = 1;
+      "StageManagerHideWidgets" = 1;
+      "StandardHideDesktopIcons" = 1;
+      "StandardHideWidgets" = 1;
+    };
+
+    "com.apple.AppleMultitouchTrackpad" = {
+      "Clicking" = 0;
+      "DragLock" = 0;
+      "Dragging" = 0;
+      "TrackpadCornerSecondaryClick" = 2;
+      "TrackpadFiveFingerPinchGesture" = 0;
+      "TrackpadFourFingerHorizSwipeGesture" = 2;
+      "TrackpadFourFingerPinchGesture" = 0;
+      "TrackpadFourFingerVertSwipeGesture" = 2;
+      "TrackpadHandResting" = 1;
+      "TrackpadHorizScroll" = 1;
+      "TrackpadMomentumScroll" = 1;
+      "TrackpadPinch" = 1;
+      "TrackpadRightClick" = 0;
+      "TrackpadRotate" = 1;
+      "TrackpadScroll" = 1;
+      "TrackpadThreeFingerDrag" = 0;
+      "TrackpadThreeFingerHorizSwipeGesture" = 2;
+      "TrackpadThreeFingerTapGesture" = 0;
+      "TrackpadThreeFingerVertSwipeGesture" = 2;
+      "TrackpadTwoFingerDoubleTapGesture" = 1;
+      "TrackpadTwoFingerFromRightEdgeSwipeGesture" = 0;
+      "USBMouseStopsTrackpad" = 0;
+    };
+
+    "com.apple.driver.AppleBluetoothMultitouch.trackpad" = {
+      "Clicking" = 0;
+      "DragLock" = 0;
+      "Dragging" = 0;
+      "TrackpadCornerSecondaryClick" = 2;
+      "TrackpadFiveFingerPinchGesture" = 0;
+      "TrackpadFourFingerHorizSwipeGesture" = 2;
+      "TrackpadFourFingerPinchGesture" = 0;
+      "TrackpadFourFingerVertSwipeGesture" = 2;
+      "TrackpadHandResting" = 1;
+      "TrackpadHorizScroll" = 1;
+      "TrackpadMomentumScroll" = 1;
+      "TrackpadPinch" = 1;
+      "TrackpadRightClick" = 0;
+      "TrackpadRotate" = 1;
+      "TrackpadScroll" = 1;
+      "TrackpadThreeFingerDrag" = 0;
+      "TrackpadThreeFingerHorizSwipeGesture" = 2;
+      "TrackpadThreeFingerTapGesture" = 0;
+      "TrackpadThreeFingerVertSwipeGesture" = 2;
+      "TrackpadTwoFingerDoubleTapGesture" = 1;
+      "TrackpadTwoFingerFromRightEdgeSwipeGesture" = 0;
+      "USBMouseStopsTrackpad" = 0;
+    };
+  };
+};
+
+  
+}
+
