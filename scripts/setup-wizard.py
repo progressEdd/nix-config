@@ -16,7 +16,7 @@ from template import *
 def main() -> None:
     print("🔧  Nix setup-wizard\n")
 
-    role_default = "darwin-laptop" if is_darwin() else "linux-desktop"
+    role_default = "mac-laptop" if is_darwin() else "linux-desktop"
     gpu          = detect_gpu()
     gpu_import = ""
 
