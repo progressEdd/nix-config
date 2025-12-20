@@ -2,7 +2,7 @@
 { config, pkgs, home-manager, plasma-manager, lib, ... }:
 
 let
-  username     = "developedd";
+  username     = "progressedd";
   userPackages = with pkgs; [
     # add account specific packages here
     colima
