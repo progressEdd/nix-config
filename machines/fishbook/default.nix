@@ -1,0 +1,38 @@
+{ config, modules, pkgs, host, home-manager, nix-homebrew, nixos-hardware, ... }:
+
+{
+  imports = [
+    modules.universal
+    modules.darwin
+    
+    home-manager.darwinModules.home-manager
+    nix-homebrew.darwinModules.nix-homebrew
+    ./hardware-configuration.nix
+    ../../users/progressedd.nix
+  ];
+
+  networking.hostName  = host;
+  my.isLaptop          = false;
+
+  time.timeZone        = "America/Chicago";
+
+  # nix-homebrew configuration
+  nix-homebrew = {
+    enable = true;
+    enableRosetta = true;
+    user = "progressedd";
+    autoMigrate = true;
+  };
+
+  # Homebrew packages
+  homebrew = {
+    enable = true;
+    taps = ["microsoft/mssql-release"];
+    brews = [
+      "unixodbc"
+      # "msodbcsql18"  # optional
+    ];
+  };
+
+  system.stateVersion = 5;
+}
