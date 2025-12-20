@@ -15,8 +15,16 @@
   networking.hostName = host;
   time.timeZone = "America/Chicago";
 
-  # Home Manager: developedd only (test)
-  home-manager.users.developedd = import ../../users/developedd.nix;
+  # Home Manager: define the user *here* (so homeDirectory can't be missed)
+  home-manager.users.developedd = { pkgs, ... }: {
+    home.username = "developedd";
+    home.homeDirectory = /Users/developedd;
+    home.stateVersion = "25.05";
+
+    imports = [
+      ../../users/developedd.nix
+    ];
+  };
 
   nix-homebrew = {
     enable = true;

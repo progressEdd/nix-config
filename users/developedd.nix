@@ -1,13 +1,7 @@
-# users/developedd.nix  (Home Manager module)
+# users/developedd.nix (HM shared module; no home.username/homeDirectory here)
 { pkgs, ... }:
 
 {
-  home.username = "developedd";
-  home.homeDirectory = /Users/developedd;
-
-  # Required by Home Manager; choose a version and keep it stable
-  home.stateVersion = "25.05";
-
   imports = [
     ../modules/development.nix
     ../dotfiles/multiple-ssh.nix
