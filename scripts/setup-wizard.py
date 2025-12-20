@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 # scripts/setup-wizard.py
-import os, sys, subprocess, json, re, textwrap
+
+import os
+import sys
 from pathlib import Path
 
 ROOT = Path(os.environ.get("REPO_ROOT", Path.cwd())).resolve()
 if not (ROOT / "flake.nix").exists():
-    sys.exit("❌  Run the wizard from the root of your nix-config repo.")
+    sys.exit("Run the wizard from the root of your nix-config repo.")
 
+<<<<<<< HEAD
 SCRIPTS_DIR = ROOT / "scripts"          # ← repo’s scripts directory
 sys.path.insert(0, str(SCRIPTS_DIR))    # helper.py, template.py
 
@@ -98,7 +101,12 @@ def main() -> None:
     rebuild = "darwin-rebuild" if is_darwin() else "sudo nixos-rebuild"
     print(f"\n✅  Created machines/{hostname}")
     print(f"   Next: {rebuild} switch --flake .#{hostname}\n")
+=======
+SCRIPTS_DIR = ROOT / "scripts"
+sys.path.insert(0, str(SCRIPTS_DIR))
+>>>>>>> c5bc1a9 (update setup wizard script and helper to work on mac)
 
+from helper import wizard_main
 
 if __name__ == "__main__":
-    main()
+    wizard_main(ROOT)
