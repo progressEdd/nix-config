@@ -5,7 +5,6 @@
     modules.universal
     home-manager.darwinModules.home-manager
     nix-homebrew.darwinModules.nix-homebrew
-    ./hardware-configuration.nix
     ../../users/progressedd.nix
   ];
 

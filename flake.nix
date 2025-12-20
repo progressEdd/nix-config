@@ -1,18 +1,18 @@
 {
   inputs = {
-    nixpkgs.url        = "github:NixOS/nixpkgs/nixos-unstable";
-    nix-darwin.url     = "github:LnL7/nix-darwin";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nix-darwin.url = "github:nix-darwin/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
-    nix-homebrew.url   = "github:zhaofengli-wip/nix-homebrew";
-    home-manager.url   = "github:nix-community/home-manager";
+    nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
+    home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     plasma-manager.url = "github:nix-community/plasma-manager";
-    plasma-manager.inputs.nixpkgs.follows     = "nixpkgs";
+    plasma-manager.inputs.nixpkgs.follows = "nixpkgs";
     plasma-manager.inputs.home-manager.follows = "home-manager";
     nixos-hardware.url = "github:NixOS/nixos-hardware";
-  };
+    };
 
-  outputs = { self, nixpkgs, nix-darwin, nix-homebrew, home-manager, plasma-manager, nixos-hardware, ... }:
+    outputs = { self, nixpkgs, nix-darwin, nix-homebrew, home-manager, plasma-manager, nixos-hardware, ... }:
 
   let
     # your machines:
