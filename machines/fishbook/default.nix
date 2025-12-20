@@ -9,7 +9,6 @@
   ];
 
   networking.hostName  = host;
-  my.isLaptop          = false;
 
   time.timeZone        = "America/Chicago";
 
