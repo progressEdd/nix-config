@@ -29,7 +29,7 @@
   # macOS-specific settings
   system.stateVersion = 5;
   nixpkgs.hostPlatform = "aarch64-darwin";
-  nixpkgs.config.allowUnfree = true
+  nixpkgs.config.allowUnfree = true;
 
   security.sudo.extraConfig = ''
     # Set timeout to 1 hour (60 minutes)
