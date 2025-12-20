@@ -3,8 +3,6 @@
 {
   imports = [
     modules.universal
-    modules.darwin
-    
     home-manager.darwinModules.home-manager
     nix-homebrew.darwinModules.nix-homebrew
     ./hardware-configuration.nix
@@ -20,7 +18,7 @@
   nix-homebrew = {
     enable = true;
     enableRosetta = true;
-    user = "progressedd";
+    user = "developedd";
     autoMigrate = true;
   };
 
