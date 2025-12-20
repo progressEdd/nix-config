@@ -1,16 +1,12 @@
-# users/developedd.nix (Home Manager module)
+# users/developedd.nix  (Home Manager module)
 { pkgs, ... }:
 
-let
-  username = "developedd";
-  homeDirStr = if pkgs.stdenv.isDarwin then "/Users/${username}" else "/home/${username}";
-in
 {
-  home.username = username;
-  home.homeDirectory = builtins.toPath homeDirStr;
+  home.username = "developedd";
+  home.homeDirectory = /Users/developedd;
 
-  # set this somewhere in HM (if not already set in another imported HM module)
-  # home.stateVersion = "25.11";
+  # Required by Home Manager; choose a version and keep it stable
+  home.stateVersion = "25.05";
 
   imports = [
     ../modules/development.nix

@@ -1,3 +1,4 @@
+# machines/fishbook/default.nix
 { config, modules, pkgs, host, home-manager, nix-homebrew, ... }:
 
 {
@@ -14,6 +15,7 @@
   networking.hostName = host;
   time.timeZone = "America/Chicago";
 
+  # Home Manager: developedd only (test)
   home-manager.users.developedd = import ../../users/developedd.nix;
 
   nix-homebrew = {
