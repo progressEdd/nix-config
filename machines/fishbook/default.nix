@@ -1,4 +1,4 @@
-{ config, modules, pkgs, host, home-manager, nix-homebrew, nixos-hardware, ... }:
+{ config, modules, pkgs, host, home-manager, nix-homebrew, ... }:
 
 {
   imports = [
@@ -6,15 +6,16 @@
     modules.macHome
     home-manager.darwinModules.home-manager
     nix-homebrew.darwinModules.nix-homebrew
-    # ../../users/progressedd.nix
-    ../../users/developedd.nix
   ];
 
-  networking.hostName  = host;
+  nix.enable = true;
+  system.primaryUser = "developedd";
 
-  time.timeZone        = "America/Chicago";
+  networking.hostName = host;
+  time.timeZone = "America/Chicago";
 
-  # nix-homebrew configuration
+  home-manager.users.developedd = import ../../users/developedd.nix;
+
   nix-homebrew = {
     enable = true;
     enableRosetta = true;
@@ -22,14 +23,10 @@
     autoMigrate = true;
   };
 
-  # Homebrew packages
   homebrew = {
     enable = true;
-    taps = ["microsoft/mssql-release"];
-    brews = [
-      "unixodbc"
-      # "msodbcsql18"  # optional
-    ];
+    taps = [ "microsoft/mssql-release" ];
+    brews = [ "unixodbc" ];
   };
 
   system.stateVersion = 5;
