@@ -1,12 +1,13 @@
 # machines/fishbook/default.nix
-{ config, modules, pkgs, host, home-manager, nix-homebrew, ... }:
+{ config, modules, pkgs, host, home-manager, nix-homebrew, lib, ... }:
 
 {
   imports = [
     modules.universal
-    modules.macHome
+    modules.macHome  
     home-manager.darwinModules.home-manager
     nix-homebrew.darwinModules.nix-homebrew
+    ../../users/developedd.nix
   ];
 
   nix.enable = true;
@@ -14,21 +15,6 @@
 
   networking.hostName = host;
   time.timeZone = "America/Chicago";
-
-  # Home Manager: developedd only (test)
-  home-manager.users = {
-    developedd = {
-      home = {
-        username = "developedd";
-        homeDirectory = /Users/developedd;
-        stateVersion = "25.05";
-      };
-
-      imports = [
-        ../../users/developedd.nix
-      ];
-    };
-  };
 
   nix-homebrew = {
     enable = true;

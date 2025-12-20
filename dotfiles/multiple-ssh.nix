@@ -68,8 +68,8 @@ in
       {
         condition = "gitdir:*/${primaryFolder}/";
         contents = {
-          user.name  = "github_username_account_1";
-          user.email = "set@youremail.com";
+          user.name  = "progressEdd";
+          user.email = "progressEdd@gmail.com";
           url."git@github.com-primary:".insteadOf = [
             "https://github.com/"
             "git@github.com:"
@@ -79,8 +79,8 @@ in
       {
         condition = "gitdir:*/${secondaryFolder}/";
         contents = {
-          user.name = "github_username_account_2";
-          user.email = "set@yourotheremail.com";
+          user.name = "progressEdd";
+          user.email = "edward.tang@ey.com";
           url."git@github.com-secondary:".insteadOf = [
             "https://github.com/"
             "git@github.com:"
@@ -100,6 +100,6 @@ in
      maxCacheTtl = 86400;
      # six hours
      defaultCacheTtl = 21600;
-     pinentry.package  = pkgs.pinentry-qt;
+     pinentry.package  = pkgs.pinentry-tty;
   };
 }

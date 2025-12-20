@@ -1,20 +1,45 @@
-# users/developedd.nix (HM shared module; no home.username/homeDirectory here)
-{ pkgs, ... }:
+# users/developedd.nix
+{ config, pkgs, lib, ... }:
 
-{
-  imports = [
-    ../modules/development.nix
-    ../dotfiles/multiple-ssh.nix
-  ];
+let
+  username = "developedd";
 
-  home.file.".config/karabiner/karabiner.json".source = ../dotfiles/karabiner.json;
+  homeDir =
+    if pkgs.stdenv.isDarwin
+    then "/Users/${username}"
+    else "/home/${username}";
 
-  programs.fish.enable = true;
-
-  home.packages = with pkgs; [
+  userPackages = with pkgs; [
     colima
     code-cursor
     ollama
-    obs-studio
+    # obs-studio
   ];
+in
+{
+  users.users.${username} = lib.mkMerge [
+    (lib.mkIf pkgs.stdenv.isLinux {
+      isNormalUser = true;
+      home = homeDir;
+      extraGroups = [ "wheel" ];
+    })
+    (lib.mkIf pkgs.stdenv.isDarwin {
+      home = homeDir;
+    })
+  ];
+
+  home-manager.users.${username} = {
+    home.username = username;
+    home.homeDirectory = homeDir;
+    home.stateVersion = "25.05";
+
+    imports = [
+      # ../modules/mac-home.nix
+      ../modules/development.nix
+      ../dotfiles/multiple-ssh.nix
+    ];
+
+    programs.fish.enable = true;
+    home.packages = userPackages;
+  };
 }
