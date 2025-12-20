@@ -18,10 +18,6 @@
   ];
   # Enable nix-daemon
   services.nix-daemon.enable = true;
-  
-  home.file.".config/karabiner/karabiner.json" = {
-    source = ../dotfiles/karabiner.json;
-  };
 
   # Enable Fish shell support
   programs.fish.enable = true;

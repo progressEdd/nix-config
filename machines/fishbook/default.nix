@@ -3,9 +3,11 @@
 {
   imports = [
     modules.universal
+    modules.macHome
     home-manager.darwinModules.home-manager
     nix-homebrew.darwinModules.nix-homebrew
-    ../../users/progressedd.nix
+    # ../../users/progressedd.nix
+    ../../users/developedd.nix
   ];
 
   networking.hostName  = host;
