@@ -2,14 +2,13 @@
 { config, pkgs, home-manager, plasma-manager, lib, ... }:
 
 let
-  username     = "progressedd";
+  username     = "developedd";
   userPackages = with pkgs; [
     # add account specific packages here
     colima
     code-cursor
     ollama
-    alt-tab-macos
-    stats    
+    obs-studio
   ];
   
   # Determine home directory based on OS
