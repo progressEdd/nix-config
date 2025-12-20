@@ -3,9 +3,6 @@
 
 {
   # macOS-specific home packages (already have some in development.nix)
-  home.packages = with pkgs; [
-    cmake
-  ];
   # System packages for macOS
   environment.systemPackages = with pkgs; [
     imagemagick
