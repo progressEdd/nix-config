@@ -1,6 +1,9 @@
 # modules/mac-home.nix - Home Manager configuration for macOS users
 { pkgs, ... }:
-
+let
+  user = "developedd";
+  fishPath = "${pkgs.fish}/bin/fish";
+in
 {
   # macOS-specific home packages (already have some in development.nix)
   # System packages for macOS
@@ -17,6 +20,38 @@
   ];
   # Enable Fish shell support
   programs.fish.enable = true;
+  environment.etc."shells".text = ''
+    /bin/bash
+    /bin/csh
+    /bin/dash
+    /bin/ksh
+    /bin/sh
+    /bin/tcsh
+    /bin/zsh
+    ${pkgs.fish}/bin/fish
+  '';
+  # best-effort declarative setting
+  users.users.${user}.shell = pkgs.fish;
+
+  # hard-enforce via activation (covers existing users reliably)
+  system.activationScripts.setUserShellToFish.text = ''
+    set -euo pipefail
+    USER="${user}"
+    FISH="${fishPath}"
+
+    echo "setUserShellToFish: enforcing $USER -> $FISH"
+
+    current="$(/usr/bin/dscl . -read /Users/$USER UserShell | /usr/bin/awk '{print $2}')"
+    echo "setUserShellToFish: current=$current"
+
+    if [ "$current" != "$FISH" ]; then
+      /usr/bin/dscl . -change /Users/$USER UserShell "$current" "$FISH" \
+        || ( /usr/bin/dscl . -delete /Users/$USER UserShell && /usr/bin/dscl . -create /Users/$USER UserShell "$FISH" )
+    fi
+
+    /usr/bin/dscl . -read /Users/$USER UserShell
+  '';
+
 
   # macOS-specific settings
   system.stateVersion = 5;
