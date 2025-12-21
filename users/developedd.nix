@@ -38,8 +38,6 @@ in
       ../modules/development.nix
       ../dotfiles/multiple-ssh.nix
     ];
-
-    programs.fish.enable = true;
     home.packages = userPackages;
   };
 }
