@@ -27,6 +27,9 @@
     enable = true;
     taps = [ "microsoft/mssql-release" ];
     brews = [ "unixodbc" ];
+    casks = [
+      # "obs"
+      ];
   };
 
   system.stateVersion = 5;
