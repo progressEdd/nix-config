@@ -68,6 +68,15 @@
         "com.apple.trackpad.forceClick" = 0;
         "com.apple.trackpad.scaling" = "0.875";
       };
+      "com.apple.symbolichotkeys" = {
+        AppleSymbolicHotKeys = {
+          # Spotlight search (⌘Space)
+          "64" = { enabled = false; };
+
+          # Spotlight Finder search window (⌘⌥Space)
+          "65" = { enabled = false; };
+        };
+      };
 
       "com.apple.dock" = {
         "autohide" = 1;
@@ -161,7 +170,7 @@
         "TrackpadTwoFingerFromRightEdgeSwipeGesture" = 0;
         "USBMouseStopsTrackpad" = 0;
       };
-      
+
     "com.raycast.macos" = {
       "raycastGlobalHotkey" = "Control-49";
       "raycastPreferredWindowMode" = "default";
@@ -205,20 +214,20 @@
       "lastVersion" = 91;
     };
 
-    "com.lwouis.alt-tab-macos" = {
-      "menubarIconShown" = true;
-      "preferencesVersion" = "7.36.0";
+    # "com.lwouis.alt-tab-macos" = {
+    #   "menubarIconShown" = true;
+    #   "preferencesVersion" = "7.36.0";
 
-      "SUHasLaunchedBefore" = 1;
-      "SULastCheckTime" = "2025-12-12 18:09:25 +0000";
-      "updatePolicy" = 1;
+    #   "SUHasLaunchedBefore" = 1;
+    #   "SULastCheckTime" = "2025-12-12 18:09:25 +0000";
+    #   "updatePolicy" = 1;
 
-      "holdShortcut" = "⌥";
-      "nextWindowShortcut" = "⇥";
-      "nextWindowShortcut2" = "`";
+    #   "holdShortcut" = "⌥";
+    #   "nextWindowShortcut" = "⇥";
+    #   "nextWindowShortcut2" = "`";
 
-      "windowMaxWidthInRow" = 30;
-    };
+    #   "windowMaxWidthInRow" = 30;
+    # };
     };
   };
 
