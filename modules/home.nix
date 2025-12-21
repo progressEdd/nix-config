@@ -9,17 +9,6 @@
 
   fonts.fontconfig.enable = true;
 
-  xdg.mimeApps = {
-    enable = true;
-    defaultApplications = {
-      "text/html" = "librewolf.desktop";
-      "x-scheme-handler/http" = "librewolf.desktop";
-      "x-scheme-handler/https" = "librewolf.desktop";
-      "x-scheme-handler/about" = "librewolf.desktop";
-      "x-scheme-handler/unknown" = "librewolf.desktop";
-    };
-  };
-
   nix = {
     settings.auto-optimise-store = true;
 
@@ -50,11 +39,11 @@
       # system packages
       vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
       wget
-      wl-clipboard
-      xclip
+      # wl-clipboard
+      # xclip
       usbutils
-      kdePackages.kdeconnect-kde
-      kdePackages.kcalc
+      # kdePackages.kdeconnect-kde
+      # kdePackages.kcalc
     ];
     stateVersion = "25.05";
   };
