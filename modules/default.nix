@@ -6,4 +6,5 @@
   kdeHome   = ./kde-home.nix;
   steamdeck = ./steamdeck-plasma-system.nix;
   globalHome = ./home.nix;
+  macHome    = ./mac-home.nix;
 }

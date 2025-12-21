@@ -21,9 +21,9 @@ in
     gcc
     zig
     fastfetch
-    chromium
-    chromedriver
-    undetected-chromedriver
+    # chromium
+    # chromedriver
+    # undetected-chromedriver
     glib
     cacert
 
@@ -45,9 +45,9 @@ in
     LD_LIBRARY_PATH =
       "${pkgs.lib.makeLibraryPath [ pkgs.stdenv.cc.cc.lib ]}:$LD_LIBRARY_PATH";
 
-    PLAYWRIGHT_BROWSERS_PATH = "${pkgs.playwright-driver.browsers}";
-    PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS = "true";
-    SE_CHROMEDRIVER = "${pkgs.chromedriver}/bin/chromedriver";
+    # PLAYWRIGHT_BROWSERS_PATH = "${pkgs.playwright-driver.browsers}";
+    # PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS = "true";
+    # SE_CHROMEDRIVER = "${pkgs.chromedriver}/bin/chromedriver";
 
     # Bun global install/cache root (writeable by user)
     BUN_INSTALL = bunInstall;

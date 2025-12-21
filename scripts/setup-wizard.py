@@ -14,6 +14,5 @@ sys.path.insert(0, str(SCRIPTS_DIR))
 
 from helper import wizard_main
 
-
 if __name__ == "__main__":
     wizard_main(ROOT)
