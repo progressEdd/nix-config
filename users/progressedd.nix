@@ -41,5 +41,6 @@ in
     home.packages = userPackages;
     home.file.".config/karabiner/karabiner.json".source =
     ../dotfiles/karabiner.json;
+    force = true;
   };
 }
