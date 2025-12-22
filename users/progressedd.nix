@@ -1,44 +1,43 @@
-# users/progressedd.nix
-{ config, pkgs, home-manager, plasma-manager, lib, ... }:
+# users/developedd.nix
+{ config, pkgs, lib, ... }:
 
 let
-  username     = "progressedd";
+  username = "progressedd";
+
+  homeDir =
+    if pkgs.stdenv.isDarwin
+    then "/Users/${username}"
+    else "/home/${username}";
+
   userPackages = with pkgs; [
-    # add account specific packages here
     colima
     code-cursor
     ollama
-    obs-studio
+    # obs-studio
   ];
-  
-  # Determine home directory based on OS
-  homeDir = if pkgs.stdenv.isDarwin 
-            then "/Users/${username}"
-            else "/home/${username}";
 in
 {
   users.users.${username} = lib.mkMerge [
-    # Linux-specific config
     (lib.mkIf pkgs.stdenv.isLinux {
       isNormalUser = true;
-      home         = homeDir;
-      extraGroups  = [ "wheel" ];
+      home = homeDir;
+      extraGroups = [ "wheel" ];
     })
-    # macOS-specific config
     (lib.mkIf pkgs.stdenv.isDarwin {
       home = homeDir;
     })
   ];
 
   home-manager.users.${username} = {
-    home.username      = username;
+    home.username = username;
     home.homeDirectory = homeDir;
+    home.stateVersion = "25.05";
+
     imports = [
-      ../modules/mac-home.nix
+      # ../modules/mac-home.nix
       ../modules/development.nix
       ../dotfiles/multiple-ssh.nix
     ];
-    programs.fish.enable = true;
-    home.packages        = userPackages;
+    home.packages = userPackages;
   };
 }

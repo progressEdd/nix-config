@@ -99,7 +99,7 @@ in
         "com.apple.sound.beep.volume" = 1;
         "com.apple.springing.delay" = "0.5";
         "com.apple.springing.enabled" = 0;
-        "com.apple.swipescrolldirection" = 0;
+        "com.apple.swipescrolldirection" = false;
         "com.apple.trackpad.forceClick" = 0;
         "com.apple.trackpad.scaling" = "0.875";
       };
@@ -114,7 +114,7 @@ in
       };
 
       "com.apple.dock" = {
-        "autohide" = 1;
+        "autohide" = true;
         "expose-group-apps" = 0;
         "launchanim" = 0;
         "mru-spaces" = 0;
@@ -128,9 +128,9 @@ in
       };
 
       "com.apple.screencapture" = {
-        "disable-shadow" = 1;
+        "disable-shadow" = true;
         "location-last" = "~/Pictures/screenshots";
-        "showsCursor" = 1;
+        "showsCursor" = true;
         "target" = "clipboard";
       };
 
