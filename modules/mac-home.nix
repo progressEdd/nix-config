@@ -52,11 +52,8 @@ in
     /usr/bin/dscl . -read /Users/$USER UserShell
   '';
 
-  xdg.enable = true;
-
-  xdg.configFile."karabiner/karabiner.json" = {
-    source = ./karabiner/karabiner.json;  # path relative to this .nix file
-  };
+  home.file.".config/karabiner/karabiner.json".source =
+    ../dotfiles/karabiner.json;
   # macOS-specific settings
   system.stateVersion = 5;
   nixpkgs.hostPlatform = "aarch64-darwin";
