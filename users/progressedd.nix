@@ -42,7 +42,7 @@ in
     xdg.enable = true;
 
     xdg.configFile."karabiner/karabiner.json" = {
-      source = ./karabiner/karabiner.json;
+      source = ../dotfiles/karabiner.json;
       force = true;
     };
   };
