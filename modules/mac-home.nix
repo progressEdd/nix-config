@@ -1,7 +1,7 @@
 # modules/mac-home.nix - Home Manager configuration for macOS users
 { pkgs, ... }:
 let
-  user = "developedd";
+  user = "progressedd";
   fishPath = "${pkgs.fish}/bin/fish";
 in
 {
@@ -52,7 +52,11 @@ in
     /usr/bin/dscl . -read /Users/$USER UserShell
   '';
 
+  xdg.enable = true;
 
+  xdg.configFile."karabiner/karabiner.json" = {
+    source = ./karabiner/karabiner.json;  # path relative to this .nix file
+  };
   # macOS-specific settings
   system.stateVersion = 5;
   nixpkgs.hostPlatform = "aarch64-darwin";
