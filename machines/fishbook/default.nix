@@ -27,7 +27,7 @@
   homebrew = {
     enable = true;
     taps = [  ]; # "microsoft/mssql-release"
-    brews = [ "unixodbc" ];
+    brews = [ ]; # "unixodbc" 
     casks = [
       # "obs"
       ];
