@@ -79,7 +79,7 @@
     zoxide = {
       enable = true;
       enableFishIntegration = true;
-      options = ["--cmd cd | source"];
+      options = ["--cmd cd"];
     };
     bash = {
       enable = true;
