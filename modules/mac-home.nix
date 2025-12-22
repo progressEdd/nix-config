@@ -52,8 +52,6 @@ in
     /usr/bin/dscl . -read /Users/$USER UserShell
   '';
 
-  home.file.".config/karabiner/karabiner.json".source =
-    ../dotfiles/karabiner.json;
   # macOS-specific settings
   system.stateVersion = 5;
   nixpkgs.hostPlatform = "aarch64-darwin";
