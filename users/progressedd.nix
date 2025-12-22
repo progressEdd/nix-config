@@ -41,9 +41,9 @@ in
     home.packages = userPackages;
     xdg.enable = true;
 
-  xdg.configFile."karabiner/karabiner.json" = {
-    source = ./karabiner/karabiner.json;
-    force = true;
-  };
+    xdg.configFile."karabiner/karabiner.json" = {
+      source = ./karabiner/karabiner.json;
+      force = true;
+    };
   };
 }
