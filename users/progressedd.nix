@@ -39,9 +39,11 @@ in
       ../dotfiles/multiple-ssh.nix
     ];
     home.packages = userPackages;
-    home.file.".config/karabiner/karabiner.json" = {
-      source =../dotfiles/karabiner.json;
+    xdg.enable = true;
+
+  xdg.configFile."karabiner/karabiner.json" = {
+    source = ./karabiner/karabiner.json;
     force = true;
-    };
+  };
   };
 }
