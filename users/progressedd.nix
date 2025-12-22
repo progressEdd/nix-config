@@ -39,5 +39,7 @@ in
       ../dotfiles/multiple-ssh.nix
     ];
     home.packages = userPackages;
+    home.file.".config/karabiner/karabiner.json".source =
+    ../dotfiles/karabiner.json;
   };
 }
