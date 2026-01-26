@@ -10,7 +10,7 @@ in
   environment.systemPackages = with pkgs; [
     imagemagick
     darwin.lsusb
-    karabiner-elements
+    # karabiner-elements
     alt-tab-macos
     stats
     hidden-bar
