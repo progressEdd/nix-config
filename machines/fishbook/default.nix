@@ -7,7 +7,7 @@
     modules.macHome  
     home-manager.darwinModules.home-manager
     nix-homebrew.darwinModules.nix-homebrew
-    ../../users/developedd.nix
+    # ../../users/developedd.nix
     ../../users/progressedd.nix
   ];
 
@@ -30,6 +30,7 @@
     brews = [ ]; # "unixodbc" 
     casks = [
       # "obs"
+      "karabiner-elements"
       ];
   };
 
