@@ -33,6 +33,7 @@
       "karabiner-elements"
       "flux-app"
       "displaylink"
+      "itsycal"
       ];
   };
 
