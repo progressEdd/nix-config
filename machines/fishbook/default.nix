@@ -31,6 +31,8 @@
     casks = [
       # "obs"
       "karabiner-elements"
+      "flux-app"
+      "displaylink"
       ];
   };
 
