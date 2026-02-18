@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSStatusItem Preferred Position Item-0</key>
+	<real>399</real>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>3666 471 620 398 2056 -831 3840 2135 </string>
+	<key>SUEnableAutomaticChecks</key>
+	<integer>0</integer>
+	<key>SUHasLaunchedBefore</key>
+	<integer>1</integer>
+	<key>SULastCheckTime</key>
+	<string>2025-01-21 17:59:06 +0000</string>
+	<key>allowAnyShortcut</key>
+	<integer>1</integer>
+	<key>alternateDefaultShortcuts</key>
+	<integer>1</integer>
+	<key>disabledApps</key>
+	<string>[]</string>
+	<key>internalTilingNotified</key>
+	<integer>1</integer>
+	<key>landscapeSnapAreas</key>
+	<string>null</string>
+	<key>lastVersion</key>
+	<integer>91</integer>
+	<key>launchOnLogin</key>
+	<integer>1</integer>
+	<key>portraitSnapAreas</key>
+	<string>null</string>
+	<key>reflowTodo</key>
+	<dict>
+		<key>keyCode</key>
+		<integer>45</integer>
+		<key>modifierFlags</key>
+		<integer>786432</integer>
+	</dict>
+	<key>subsequentExecutionMode</key>
+	<integer>1</integer>
+	<key>toggleTodo</key>
+	<dict>
+		<key>keyCode</key>
+		<integer>11</integer>
+		<key>modifierFlags</key>
+		<integer>786432</integer>
+	</dict>
+</dict>
+</plist>

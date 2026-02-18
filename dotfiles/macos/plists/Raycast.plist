@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSNavLastRootDirectory</key>
+	<string>~/Applications/Edge Apps.localized</string>
+	<key>NSNavPanelExpandedSizeForOpenMode</key>
+	<string>{800, 448}</string>
+	<key>NSStatusItem Preferred Position raycastIcon</key>
+	<real>1034</real>
+	<key>NSWindow Frame NSNavPanelAutosaveName</key>
+	<string>1520 1203 800 448 0 0 3840 2135 </string>
+	<key>aiDynamicPlaceholdersMigrationDate</key>
+	<date>2025-04-09T14:37:49Z</date>
+	<key>amplitudePulseAnalyticsTracker_nextHeartbeatDate</key>
+	<date>2026-02-19T06:00:00Z</date>
+	<key>calculator_currenciesRefresh</key>
+	<data>
+	eyJzdWNjZWVkZWQiOnsiXzAiOjc5MzA5OTU4NC4xMDIzNzh9fQ==
+	</data>
+	<key>camera_isMirroring</key>
+	<true/>
+	<key>command-extension_brew.outdated__9349c6b9-c442-4895-98e3-b3a926e74ed7-searchBarAccessory_default_dropdown_id_previousValue</key>
+	<string>all</string>
+	<key>command-extension_brew.search__9349c6b9-c442-4895-98e3-b3a926e74ed7-searchBarAccessory_default_dropdown_id_previousValue</key>
+	<string>all</string>
+	<key>commandScheduler_commandRuns</key>
+	<dict/>
+	<key>commandsPreferencesExpandedItemIds</key>
+	<array>
+		<string>builtin_package_windowManagement</string>
+		<string>applications</string>
+		<string>extension_arc__606e26d8-b3c5-4760-8001-dccce1b872c4</string>
+	</array>
+	<key>database_lastValidAppVersion</key>
+	<string>1.104.6</string>
+	<key>database_lastValidOSVersion</key>
+	<string>26.3.0</string>
+	<key>didMigrationForClipboardHistoryFavicons</key>
+	<true/>
+	<key>fallbackSearches_didMigrateScriptCommands</key>
+	<true/>
+	<key>faviconProvider</key>
+	<string>legacy</string>
+	<key>floatingNotes_didCreateOnboardingNote</key>
+	<true/>
+	<key>floatingNotes_didMigrateFloatingNotesHotkeysAndAliases</key>
+	<true/>
+	<key>floatingNotes_didMigrateFloatingNotesRecords</key>
+	<true/>
+	<key>ios_showAnnouncement</key>
+	<true/>
+	<key>mainWindowPositionCache</key>
+	<dict>
+		<key>1(0.0, 0.0, 1728.0, 1117.0)</key>
+		<string>{489, 943}</string>
+		<key>1(0.0, 0.0, 2056.0, 1285.0)</key>
+		<string>{653, 1066}</string>
+		<key>1(0.0, 0.0, 2056.0, 1329.0)</key>
+		<string>{682, 952}</string>
+		<key>1(0.0, 0.0, 2336.0, 1510.0)</key>
+		<string>{793, 1230}</string>
+		<key>1(0.0, 0.0, 2992.0, 1934.0)</key>
+		<string>{1121, 1540}</string>
+		<key>1(0.0, 0.0, 3456.0, 2160.0)</key>
+		<string>{1353, 1705}</string>
+		<key>10(-6000.0, -226.0, 3840.0, 2160.0)</key>
+		<string>{-4455, 1479}</string>
+		<key>10(-6000.0, -242.0, 3840.0, 2160.0)</key>
+		<string>{-4455, 1463}</string>
+		<key>10(5896.0, -1581.0, 2160.0, 3840.0)</key>
+		<string>{6601, 1350}</string>
+		<key>11(-2160.0, -1428.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 1503}</string>
+		<key>11(-2160.0, -349.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 2582}</string>
+		<key>11(-2160.0, -721.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 2210}</string>
+		<key>11(2056.0, -303.0, 3840.0, 2160.0)</key>
+		<string>{3601, 1402}</string>
+		<key>12(-1920.0, 249.0, 1920.0, 1080.0)</key>
+		<string>{-1335, 1165}</string>
+		<key>12(-2160.0, -1162.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 1769}</string>
+		<key>12(-6000.0, -487.0, 3840.0, 2160.0)</key>
+		<string>{-4455, 1218}</string>
+		<key>12(-6000.0, 1331.0, 3840.0, 2160.0)</key>
+		<string>{-4455, 3036}</string>
+		<key>12(2056.0, -302.0, 3840.0, 2160.0)</key>
+		<string>{2056, 1285}</string>
+		<key>128(-2160.0, -1182.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 1749}</string>
+		<key>13(-6000.0, -242.0, 3840.0, 2160.0)</key>
+		<string>{-4455, 1463}</string>
+		<key>13(-6000.0, -623.0, 3840.0, 2160.0)</key>
+		<string>{-4455, 1082}</string>
+		<key>13(-6000.0, 1331.0, 3840.0, 2160.0)</key>
+		<string>{-4455, 3036}</string>
+		<key>14(-1920.0, 249.0, 1920.0, 1080.0)</key>
+		<string>{-1335, 1165}</string>
+		<key>14(-2160.0, -1413.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 1518}</string>
+		<key>14(-2160.0, -2167.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 764}</string>
+		<key>14(-2160.0, -349.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 2582}</string>
+		<key>14(-2160.0, -721.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 2210}</string>
+		<key>15(-2160.0, -349.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 2582}</string>
+		<key>16(-2160.0, -1601.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 1330}</string>
+		<key>16(-6000.0, -487.0, 3840.0, 2160.0)</key>
+		<string>{-4455, 1218}</string>
+		<key>17(-2160.0, -1162.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 1769}</string>
+		<key>17(-2160.0, -2167.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 764}</string>
+		<key>18(-2160.0, -1162.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 1769}</string>
+		<key>18(-2160.0, -2167.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 764}</string>
+		<key>18(-2160.0, -349.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 2582}</string>
+		<key>18(-6000.0, -242.0, 3840.0, 2160.0)</key>
+		<string>{-4455, 1463}</string>
+		<key>19(-2160.0, -349.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 2582}</string>
+		<key>19(-6000.0, -226.0, 3840.0, 2160.0)</key>
+		<string>{-4455, 1479}</string>
+		<key>19(-6000.0, -487.0, 3840.0, 2160.0)</key>
+		<string>{-4455, 1218}</string>
+		<key>2(0.0, 0.0, 1920.0, 1080.0)</key>
+		<string>{585, 916}</string>
+		<key>2(1728.0, -1043.0, 3840.0, 2160.0)</key>
+		<string>{3273, 662}</string>
+		<key>2(1728.0, 37.0, 1920.0, 1080.0)</key>
+		<string>{2313, 953}</string>
+		<key>2(2056.0, -831.0, 3840.0, 2160.0)</key>
+		<string>{3601, 874}</string>
+		<key>2(2056.0, 249.0, 1920.0, 1080.0)</key>
+		<string>{2641, 1165}</string>
+		<key>2(2336.0, -90.0, 2560.0, 1600.0)</key>
+		<string>{3241, 1206}</string>
+		<key>2(2336.0, 710.0, 1280.0, 800.0)</key>
+		<string>{2601, 1360}</string>
+		<key>20(-6000.0, 1331.0, 3840.0, 2160.0)</key>
+		<string>{-4455, 3036}</string>
+		<key>23(-6000.0, 227.0, 3840.0, 2160.0)</key>
+		<string>{-4455, 1932}</string>
+		<key>24(-2160.0, -1162.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 1769}</string>
+		<key>24(-2160.0, -662.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 2269}</string>
+		<key>3(2056.0, -831.0, 3840.0, 2160.0)</key>
+		<string>{3601, 874}</string>
+		<key>3(2056.0, 249.0, 1920.0, 1080.0)</key>
+		<string>{2641, 1165}</string>
+		<key>30(-2160.0, -1162.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 1769}</string>
+		<key>31(-2160.0, -1182.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 1749}</string>
+		<key>34(-3840.0, -831.0, 3840.0, 2160.0)</key>
+		<string>{-2295, 874}</string>
+		<key>35(-6000.0, 498.0, 3840.0, 2160.0)</key>
+		<string>{-4455, 2203}</string>
+		<key>36(-2160.0, -1182.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 1749}</string>
+		<key>36(-6000.0, 1331.0, 3840.0, 2160.0)</key>
+		<string>{-4455, 3036}</string>
+		<key>36(-6000.0, 187.0, 3840.0, 2160.0)</key>
+		<string>{-4455, 1892}</string>
+		<key>37(-2160.0, -577.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 2354}</string>
+		<key>39(-2160.0, -1087.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 1844}</string>
+		<key>39(-2160.0, -1182.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 1749}</string>
+		<key>39(-6000.0, -1040.0, 2160.0, 3840.0)</key>
+		<string>{-5295, 1891}</string>
+		<key>4(-2160.0, -1087.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 1844}</string>
+		<key>4(-2160.0, -1162.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 1769}</string>
+		<key>4(-2160.0, -1182.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 1749}</string>
+		<key>4(-2160.0, -1601.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 1330}</string>
+		<key>4(-2160.0, -2511.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 420}</string>
+		<key>4(-2160.0, -2723.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 208}</string>
+		<key>4(-2160.0, -349.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 2582}</string>
+		<key>40(-3840.0, -161.0, 3840.0, 2160.0)</key>
+		<string>{-2295, 1544}</string>
+		<key>40(-3840.0, -831.0, 3840.0, 2160.0)</key>
+		<string>{-2295, 874}</string>
+		<key>43(-2160.0, -349.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 2582}</string>
+		<key>45(-2160.0, -1182.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 1749}</string>
+		<key>45(-3840.0, -161.0, 3840.0, 2160.0)</key>
+		<string>{-2295, 1544}</string>
+		<key>45(-6000.0, 1331.0, 3840.0, 2160.0)</key>
+		<string>{-4455, 3036}</string>
+		<key>45(-6000.0, 187.0, 3840.0, 2160.0)</key>
+		<string>{-4455, 1892}</string>
+		<key>46(-2160.0, -577.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 2354}</string>
+		<key>49(-3840.0, -161.0, 3840.0, 2160.0)</key>
+		<string>{-2295, 1544}</string>
+		<key>5(-1080.0, -591.0, 1080.0, 1920.0)</key>
+		<string>{-915, 939}</string>
+		<key>5(-2160.0, -1162.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 1769}</string>
+		<key>5(-2160.0, -1182.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 1749}</string>
+		<key>5(-2160.0, -349.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 2582}</string>
+		<key>5(-6000.0, -226.0, 3840.0, 2160.0)</key>
+		<string>{-4455, 1479}</string>
+		<key>5(-6000.0, -242.0, 3840.0, 2160.0)</key>
+		<string>{-4455, 1463}</string>
+		<key>5(-6000.0, -323.0, 3840.0, 2160.0)</key>
+		<string>{-4455, 1382}</string>
+		<key>5(-6000.0, 1331.0, 3840.0, 2160.0)</key>
+		<string>{-4455, 3036}</string>
+		<key>5(-6000.0, 498.0, 3840.0, 2160.0)</key>
+		<string>{-4455, 2203}</string>
+		<key>52(-3000.0, 249.0, 1920.0, 1080.0)</key>
+		<string>{-2415, 1165}</string>
+		<key>6(-2160.0, -1162.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 1769}</string>
+		<key>6(-2160.0, -1182.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 1749}</string>
+		<key>6(-2160.0, -349.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 2582}</string>
+		<key>6(-6000.0, -242.0, 3840.0, 2160.0)</key>
+		<string>{-4455, 1463}</string>
+		<key>6(-6000.0, 1331.0, 3840.0, 2160.0)</key>
+		<string>{-4455, 3036}</string>
+		<key>6(-6000.0, 498.0, 3840.0, 2160.0)</key>
+		<string>{-4455, 2203}</string>
+		<key>62(-6000.0, -831.0, 3840.0, 2160.0)</key>
+		<string>{-4455, 874}</string>
+		<key>65(-6000.0, -831.0, 3840.0, 2160.0)</key>
+		<string>{-4455, 874}</string>
+		<key>7(-1920.0, 249.0, 1920.0, 1080.0)</key>
+		<string>{-1335, 1165}</string>
+		<key>7(-2160.0, -2167.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 764}</string>
+		<key>7(-6000.0, 498.0, 3840.0, 2160.0)</key>
+		<string>{-4455, 2203}</string>
+		<key>71(-6000.0, -701.0, 3840.0, 2160.0)</key>
+		<string>{-4455, 1004}</string>
+		<key>8(-1080.0, -591.0, 1080.0, 1920.0)</key>
+		<string>{-915, 939}</string>
+		<key>8(-2160.0, -1162.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 1769}</string>
+		<key>8(-3000.0, -187.0, 1080.0, 1920.0)</key>
+		<string>{-2835, 1343}</string>
+		<key>8(-6000.0, -242.0, 3840.0, 2160.0)</key>
+		<string>{-4455, 1463}</string>
+		<key>8(-6000.0, -487.0, 3840.0, 2160.0)</key>
+		<string>{-4455, 1218}</string>
+		<key>87(-2160.0, -1353.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 1578}</string>
+		<key>9(-1920.0, 249.0, 1920.0, 1080.0)</key>
+		<string>{-1335, 1165}</string>
+		<key>9(-2160.0, -1162.0, 2160.0, 3840.0)</key>
+		<string>{-1455, 1769}</string>
+		<key>9(-2720.0, 249.0, 1920.0, 1080.0)</key>
+		<string>{-2135, 1165}</string>
+		<key>9(-3000.0, 249.0, 1920.0, 1080.0)</key>
+		<string>{-2415, 1165}</string>
+		<key>9(-6000.0, -242.0, 3840.0, 2160.0)</key>
+		<string>{-4455, 1463}</string>
+		<key>9(2056.0, -302.0, 3840.0, 2160.0)</key>
+		<string>{2056, 1285}</string>
+	</dict>
+	<key>mainWindow_isMonitoringGlobalHotkeys</key>
+	<true/>
+	<key>onboardingCompleted</key>
+	<integer>1</integer>
+	<key>onboarding_completedTaskIdentifiers</key>
+	<array>
+		<string>installFirstExtension</string>
+		<string>raycastShortcuts</string>
+		<string>calculator</string>
+		<string>startWalkthrough</string>
+	</array>
+	<key>onboarding_raycastShortcuts</key>
+	<array>
+		<string>⌘W</string>
+		<string>⌘,</string>
+		<string>Esc</string>
+		<string>⌘Esc</string>
+	</array>
+	<key>onboarding_setupHotkey</key>
+	<true/>
+	<key>onboarding_showTasksProgress</key>
+	<true/>
+	<key>permissions.folders.read:/Users/progressedd/Desktop</key>
+	<true/>
+	<key>permissions.folders.read:/Users/progressedd/Documents</key>
+	<true/>
+	<key>permissions.folders.read:/Users/progressedd/Downloads</key>
+	<true/>
+	<key>permissions.folders.read:cloudStorage</key>
+	<true/>
+	<key>raycast-preferences-restorableData</key>
+	<data>
+	eyJwZXJzaXN0ZW5jZURhdGUiOjc4Nzk2ODU3NS44NDA1MzgsInR5cGVOYW1lIjoiRXh0
+	ZW5zaW9uc1ByZWZlcmVuY2VzVGFiSXRlbSJ9
+	</data>
+	<key>raycast-startFocusSession-blockable-items</key>
+	<array/>
+	<key>raycast-startFocusSession-duration</key>
+	<data>
+	bnVsbA==
+	</data>
+	<key>raycast-startFocusSession-filter-mode</key>
+	<string>block</string>
+	<key>raycast-startFocusSession-title</key>
+	<string></string>
+	<key>raycast-updates-lastAppUpdateCheckDate</key>
+	<string>1766088877.565282</string>
+	<key>raycast-updates-lastTargetCommitishInstalled</key>
+	<string>aec80c854b0076d640afa2b348f855bd74584256</string>
+	<key>raycast-updates-whatsNewItemDisplayDate</key>
+	<string>1765902913.503413</string>
+	<key>raycast-wrapped-2024-dataSummary</key>
+	<string>days: 227 opened: 4957 topAppsRaw: 62 topApps: 10 actions: 2603</string>
+	<key>raycast-wrapped-2025-dataSummary</key>
+	<string>days: 592 opened: 5462 topAppsRaw: 63 topApps: 10 actions: 3088</string>
+	<key>raycastAI_ollamaModelsList</key>
+	<data>
+	W10=
+	</data>
+	<key>raycastAiHasSeenQuickAI</key>
+	<true/>
+	<key>raycastAnonymousId</key>
+	<string>00A2E932-DB1A-49C5-9EAD-75A0C8F76639</string>
+	<key>raycastFirstKnownAppVersion</key>
+	<string>1.75.1</string>
+	<key>raycastGlobalHotkey</key>
+	<string>Control-49</string>
+	<key>raycastInstallationDate</key>
+	<string>2024-05-28 04:12:05 +0000</string>
+	<key>raycastLoginItemAutoInstalled</key>
+	<string>2024-05-28 04:12:07 +0000</string>
+	<key>raycastPreferredWindowMode</key>
+	<string>default</string>
+	<key>raycastShouldFollowSystemAppearance</key>
+	<integer>1</integer>
+	<key>showGettingStartedLink</key>
+	<true/>
+	<key>store_everInstalled</key>
+	<array>
+		<string>b55b27c1-c63b-4a2d-8939-55d5c4198f41</string>
+		<string>9349c6b9-c442-4895-98e3-b3a926e74ed7</string>
+		<string>606e26d8-b3c5-4760-8001-dccce1b872c4</string>
+		<string>4f2f1045-8725-4c82-a486-6e6b587dd101</string>
+	</array>
+	<key>store_migratedHackerNews</key>
+	<true/>
+	<key>store_migratedNative</key>
+	<true/>
+	<key>store_migratedReminders</key>
+	<true/>
+	<key>store_termsAccepted</key>
+	<true/>
+	<key>subscriptions_active</key>
+	<false/>
+	<key>useHyperKeyIcon</key>
+	<false/>
+</dict>
+</plist>
