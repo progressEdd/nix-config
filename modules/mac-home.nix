@@ -23,6 +23,7 @@ in
     rectangle
     raycast
     iterm2
+    vscodium
   ];
   # Enable Fish shell support
   programs.fish.enable = true;
