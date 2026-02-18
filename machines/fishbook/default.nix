@@ -34,6 +34,7 @@
       "flux-app"
       "displaylink"
       "itsycal"
+      "stats"
       ];
   };
 
