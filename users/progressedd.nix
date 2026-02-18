@@ -40,9 +40,12 @@ in
     ];
     home.packages = userPackages;
     home.file."Library/Services".source = ../dotfiles/macos/Services;
+    home.file."stats/eu.exelban.Stats.plist".source =
+      ../dotfiles/macos/plists/Stats.plist;
+
     home.activation.statsPrefs = ''
       /usr/bin/defaults import eu.exelban.Stats \
-        "${../dotfiles/macos/plists/Stats.plist}"
+        "$HOME/stats/eu.exelban.Stats.plist"
       /usr/bin/killall Stats 2>/dev/null || true
     '';
 
