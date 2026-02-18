@@ -12,7 +12,6 @@ in
     darwin.lsusb
     # karabiner-elements
     alt-tab-macos
-    stats
     hidden-bar
     rectangle
     raycast
