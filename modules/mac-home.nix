@@ -1,10 +1,17 @@
 # modules/mac-home.nix - Home Manager configuration for macOS users
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 let
   user = "progressedd";
   fishPath = "${pkgs.fish}/bin/fish";
 in
 {
+  # Remove /Applications/Xcode.app from sandbox paths (we only have Command Line Tools)
+  nix.settings.extra-sandbox-paths = lib.mkForce [
+    "/Library/Developer/CommandLineTools"
+    "/System/Library/Frameworks"
+    "/System/Library/PrivateFrameworks"
+  ];
+
   # macOS-specific home packages (already have some in development.nix)
   # System packages for macOS
   environment.systemPackages = with pkgs; [
