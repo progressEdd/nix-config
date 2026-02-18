@@ -26,15 +26,25 @@
 
   homebrew = {
     enable = true;
+    onActivation = {
+      autoUpdate = true;       # run `brew update` on activation
+      upgrade = true;          # upgrade outdated casks/formulae
+      cleanup = "zap";         # remove anything not listed here
+    };
     taps = [  ]; # "microsoft/mssql-release"
     brews = [ ]; # "unixodbc" 
     casks = [
       # "obs"
-      "karabiner-elements"
-      "flux-app"
+      "betterdisplay"
       "displaylink"
+      "firefox@developer-edition"
+      "flux-app"
       "itsycal"
+      "karabiner-elements"
+      "kdenlive"
+      "mac-mouse-fix"
       "stats"
+      "time-out"
       ];
   };
 
