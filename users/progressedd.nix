@@ -39,6 +39,8 @@ in
       ../dotfiles/multiple-ssh.nix
     ];
     home.packages = userPackages;
+    home.file."Library/Services".source = ../dotfiles/macos/Services;
+
     xdg.enable = true;
 
     xdg.configFile."karabiner/karabiner.json" = {
