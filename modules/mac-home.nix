@@ -139,6 +139,15 @@ in
         "target" = "clipboard";
       };
 
+      "com.apple.finder" = {
+        "_FXShowPosixPathInTitle" = true;   # show full path in Finder title bar
+        "ShowPathbar" = true;               # show path bar at bottom of Finder
+        "ShowStatusBar" = true;             # show status bar at bottom of Finder
+        "FXPreferredViewStyle" = "Nlsv";    # list view by default
+        "AppleShowAllFiles" = true;         # show hidden files
+        "FXEnableExtensionChangeWarning" = false;
+      };
+
       "com.apple.menuextra.clock" = {
         "IsAnalog" = 1;
         "ShowAMPM" = 0;
