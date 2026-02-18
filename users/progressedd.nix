@@ -42,9 +42,9 @@ in
     home.file."Library/Services".source = ../dotfiles/macos/Services;
     home.activation.statsPrefs = ''
       /usr/bin/defaults import eu.exelban.Stats \
-        "${../dotfiles/macos/plists/eu.exelban.Stats.plist}"
+        "${../dotfiles/macos/plists/Stats.plist}"
       /usr/bin/killall Stats 2>/dev/null || true
-      '';
+    '';
 
     xdg.enable = true;
 
