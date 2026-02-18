@@ -268,8 +268,4 @@
   #    pinentry.package  = pkgs.pinentry-qt;
   #  };
   };
-
-  xdg.configFile."karabiner/karabiner.json" = {
-    source = ../dotfiles/karabiner.json;
-  };
 }
