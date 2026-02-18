@@ -18,6 +18,7 @@ in
     git-lfs
     nodejs_20
     playwright-driver.browsers
+    opencode
     gcc
     zig
     fastfetch
