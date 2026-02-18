@@ -40,13 +40,34 @@ in
     ];
     home.packages = userPackages;
     home.file."Library/Services".source = ../dotfiles/macos/Services;
-    home.file."stats/eu.exelban.Stats.plist".source =
-      ../dotfiles/macos/plists/Stats.plist;
 
     home.activation.statsPrefs = ''
       /usr/bin/defaults import eu.exelban.Stats \
-        "$HOME/stats/eu.exelban.Stats.plist"
+        "${../dotfiles/macos/plists/Stats.plist}"
       /usr/bin/killall Stats 2>/dev/null || true
+    '';
+
+    home.activation.rectanglePrefs = ''
+      /usr/bin/defaults import com.knollsoft.Rectangle \
+        "${../dotfiles/macos/plists/Rectangle.plist}"
+      /usr/bin/killall Rectangle 2>/dev/null || true
+    '';
+
+    home.activation.raycastPrefs = ''
+      /usr/bin/defaults import com.raycast.macos \
+        "${../dotfiles/macos/plists/Raycast.plist}"
+    '';
+
+    home.activation.altTabPrefs = ''
+      /usr/bin/defaults import com.lwouis.alt-tab-macos \
+        "${../dotfiles/macos/plists/AltTab.plist}"
+      /usr/bin/killall AltTab 2>/dev/null || true
+    '';
+
+    home.activation.hiddenBarPrefs = ''
+      /usr/bin/defaults import com.dwarvesv.minimalbar \
+        "${../dotfiles/macos/plists/HiddenBar.plist}"
+      /usr/bin/killall "Hidden Bar" 2>/dev/null || true
     '';
 
     xdg.enable = true;
