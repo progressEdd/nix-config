@@ -134,7 +134,7 @@ in
       };
 
       "com.apple.menuextra.clock" = {
-        "IsAnalog" = 0;
+        "IsAnalog" = 1;
         "ShowAMPM" = 0;
         "ShowDate" = 2;
         "ShowDayOfWeek" = 1;
