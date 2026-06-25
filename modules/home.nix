@@ -113,24 +113,28 @@
       # For example, using vim-nix if it’s available as a package:
       plugins = with pkgs.vimPlugins; [ vim-nix ];
     };
-    vscode = {
-      enable  = true;                       # create the wrapper script and dirs
-      package = pkgs.vscodium;              # use VSCodium instead of Microsoft VS Code
+    # vscode = {
+    #   enable  = true;                       # create the wrapper script and dirs
+    #   package = pkgs.vscodium;              # use VSCodium instead of Microsoft VS Code
       
-      profiles.default = {
-        extensions = with pkgs.vscode-extensions; [
-          ms-python.python
-          ms-toolsai.jupyter
-          jnoortheen.nix-ide
-        ];
+    #   profiles.default = {
+    #     extensions = with pkgs.vscode-extensions; [
+    #       ms-python.python
+    #       ms-toolsai.jupyter
+    #       jnoortheen.nix-ide
+    #     ];
       
-        userSettings = {
-          # disable smooth scrolling
-          "editor.smoothScrolling" = false;
-          "notebook.lineNumbers"= "on";          
-        };
-      };
-    };
+    #     userSettings = {
+    #       # disable smooth scrolling
+    #       "editor.smoothScrolling" = false;
+    #       "notebook.lineNumbers"= "on";
+    #       # copilot
+    #       # "github.copilot.editor.enableAutoCompletions" = true;
+    #       # "github.copilot.nextEditSuggestions.enabled" = true;
+    #       # "terminal.integrated.inheritEnv" = false;
+    #     };
+    #   };
+    # };
     firefox = {
       enable = true;
       policies = {

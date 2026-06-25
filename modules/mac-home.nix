@@ -22,9 +22,10 @@ in
     hidden-bar
     rectangle
     # raycast
-    vicinae
+    # vicinae  # not buildable on macOS via Nix yet (see notes)
     iterm2
     vscodium
+    vscode
   ];
   # Enable Fish shell support
   programs.fish.enable = true;
