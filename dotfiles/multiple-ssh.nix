@@ -13,9 +13,12 @@ in
   # ──────────────────────────────────────────────────────────────────────────
   programs.ssh = {
     enable = true;
+    # home-manager's built-in defaults are being removed; we own the "*" block
+    # below, so opt out of the bundled default config to silence the warning.
+    enableDefaultConfig = false;
 
-    matchBlocks = {
-      # If you want it on for *all* hosts, add this catch-all first:
+    settings = {
+      # Catch-all first: applies to every host unless overridden below.
       "*" = {
         addKeysToAgent = "yes";   # valid values: "yes" | "no" | "confirm" | "ask"
       };
@@ -25,7 +28,6 @@ in
         user           = "git";
         identityFile   = "~/.ssh/${primaryKeyFile}";
         identitiesOnly = true;
-        # addKeysToAgent inherited from "*" above; you can override per-host if needed
       };
 
       "github.com-secondary" = {
@@ -33,7 +35,6 @@ in
         user           = "git";
         identityFile   = "~/.ssh/${secondaryKeyFile}";
         identitiesOnly = true;
-        # addKeysToAgent inherited from "*" above
       };
     };
 
