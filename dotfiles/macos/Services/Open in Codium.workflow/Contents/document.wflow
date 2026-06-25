@@ -56,7 +56,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>appPath</key>
-					<string>/Applications/VSCodium.app</string>
+					<string>/Applications/Nix Apps/VSCodium.app</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.OpenFinderItems</string>
