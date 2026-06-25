@@ -45,6 +45,7 @@
       "mac-mouse-fix"
       "stats"
       "time-out"
+      "steam"
       ];
   };
 
