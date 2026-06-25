@@ -21,7 +21,8 @@ in
     alt-tab-macos
     hidden-bar
     rectangle
-    raycast
+    # raycast
+    vicinae
     iterm2
     vscodium
   ];
