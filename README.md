@@ -1,56 +1,119 @@
-# bedhedd's nix config
-Welcome to this repo. If you would like to follow the development of this config, I posted updates here [bedHedd’s NixOS Adventure](https://forum.level1techs.com/t/bedhedds-nixos-adventure/228975).
-
-If you are already experienced with nix, you can run within the root of the cloned repository. 
+# progressEdd's nix config
+Welcome to this repo. I based it off of bedHedd's config, but made it work for macos. Make sure to install the nix package manager using the following command from the [nixos download page](https://nixos.org/download/)
 ```bash
-nixos-rebuild switch --flake .
+curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install | sh
+```
+
+Then install nix darwin using 
+```bash
+nix run --extra-experimental-features "nix-command flakes" \
+  github:LnL7/nix-darwin/master -- init
+```
+Finally build the macbook config using
+```bash
+sudo darwin-rebuild switch --flake .#fishbook 
 ```
 
 # structure of this repo
 ```bash
 ./nix-config
 ├── dotfiles
-│   ├── example-multiple-ssh.nix
-│   ├── fish-config.nix
-│   └── multiple-ssh.nix
+│   ├── example-multiple-ssh.nix
+│   ├── fish-config.nix
+│   ├── karabiner.json
+│   ├── macos
+│   │   ├── plists
+│   │   │   ├── AltTab.plist
+│   │   │   ├── HiddenBar.plist
+│   │   │   ├── Raycast.plist
+│   │   │   ├── Rectangle.plist
+│   │   │   └── Stats.plist
+│   │   └── Services
+│   │       ├── Open in Codium.workflow
+│   │       │   └── Contents
+│   │       │       ├── document.wflow
+│   │       │       ├── Info.plist
+│   │       │       ├── QuickLook
+│   │       │       │   └── Thumbnail.png
+│   │       │       └── Resources
+│   │       │           └── workflowCustomImage.icns
+│   │       ├── Open in Cursor.workflow
+│   │       │   └── Contents
+│   │       │       ├── document.wflow
+│   │       │       ├── Info.plist
+│   │       │       ├── QuickLook
+│   │       │       │   └── Thumbnail.png
+│   │       │       └── Resources
+│   │       │           └── workflowCustomImage.icns
+│   │       ├── Open in VS Code.workflow
+│   │       │   └── Contents
+│   │       │       ├── document.wflow
+│   │       │       ├── Info.plist
+│   │       │       ├── QuickLook
+│   │       │       │   └── Thumbnail.png
+│   │       │       └── Resources
+│   │       │           └── workflowCustomImage.icns
+│   │       └── Toggle Hidden Files.workflow
+│   │           └── Contents
+│   │               ├── document.wflow
+│   │               ├── Info.plist
+│   │               └── QuickLook
+│   │                   └── Thumbnail.png
+│   ├── multiple-ssh.nix
+│   └── xiphergrid2_kzones.json
 ├── flake.lock
 ├── flake.nix
 ├── LICENSE
 ├── machines
-│   ├── jade-tiger
-│   │   ├── default.nix
-│   │   ├── hardware-configuration.nix
-│   │   └── original-configuration.nix
-│   ├── master-of-cooling
-│   │   ├── default.nix
-│   │   ├── hardware-configuration.nix
-│   │   └── original-configuration.nix
-│   └── think-nix
-│       ├── default.nix
-│       ├── hardware-configuration.nix
-│       └── original-configuration.nix
+│   ├── fishbook
+│   │   └── default.nix
+│   ├── HT-RL06-PC
+│   │   ├── default.nix
+│   │   └── hardware-configuration.nix
+│   ├── jade-tiger
+│   │   ├── default.nix
+│   │   ├── hardware-configuration.nix
+│   │   └── original-configuration.nix
+│   ├── master-of-cooling
+│   │   ├── default.nix
+│   │   ├── hardware-configuration.nix
+│   │   └── original-configuration.nix
+│   └── think-nix
+│       ├── default.nix
+│       ├── hardware-configuration.nix
+│       └── original-configuration.nix
 ├── modules
-│   ├── default.nix
-│   ├── development.nix
-│   ├── entertainment.nix
-│   ├── guake.nix
-│   ├── home.nix
-│   ├── kde-home.nix
-│   ├── kde.nix
-│   ├── linux.nix
-│   ├── steamdeck-plasma-system.nix
-│   └── universal.nix
+│   ├── content-creation-obs-rtmp.nix
+│   ├── content-creation.nix
+│   ├── default.nix
+│   ├── development.nix
+│   ├── entertainment.nix
+│   ├── guake.nix
+│   ├── home.nix
+│   ├── kde-home.nix
+│   ├── kde.nix
+│   ├── linux.nix
+│   ├── living-room.nix
+│   ├── mac-home.nix
+│   ├── steamdeck-plasma-system.nix
+│   ├── universal.nix
+│   ├── xdg-librewolf-icons.nix
+│   └── xdg.nix
 ├── README.md
 ├── scripts
-│   ├── helper.py
-│   ├── setup-wizard.py
-│   └── template.py
+│   ├── helper.py
+│   ├── setup-wizard.py
+│   └── template.py
 └── users
     ├── admin.nix
     ├── bedhedd.nix
     ├── dev.nix
-    └── generic-user.nix
+    ├── developedd.nix
+    ├── generic-user.nix
+    └── progressedd.nix
 ```
+
+# Original content + my trees
 ## background / philosophy
 The goal of this is to have a minimal modular `default.nix` file for each machine. As I add machines, I will copy the ` configuration.nix` and `hardware.nix` file generated by the installer found in `/etc/nixos/` to the machine specific folder.
 
@@ -96,46 +159,99 @@ After downloading this repo, navigate to the directory using your terminal or a 
 ```bash
 ./nix-config
 ├── dotfiles
-│   ├── example-multiple-ssh.nix
-│   ├── fish-config.nix
-│   └── multiple-ssh.nix
+│   ├── example-multiple-ssh.nix
+│   ├── fish-config.nix
+│   ├── karabiner.json
+│   ├── macos
+│   │   ├── plists
+│   │   │   ├── AltTab.plist
+│   │   │   ├── HiddenBar.plist
+│   │   │   ├── Raycast.plist
+│   │   │   ├── Rectangle.plist
+│   │   │   └── Stats.plist
+│   │   └── Services
+│   │       ├── Open in Codium.workflow
+│   │       │   └── Contents
+│   │       │       ├── document.wflow
+│   │       │       ├── Info.plist
+│   │       │       ├── QuickLook
+│   │       │       │   └── Thumbnail.png
+│   │       │       └── Resources
+│   │       │           └── workflowCustomImage.icns
+│   │       ├── Open in Cursor.workflow
+│   │       │   └── Contents
+│   │       │       ├── document.wflow
+│   │       │       ├── Info.plist
+│   │       │       ├── QuickLook
+│   │       │       │   └── Thumbnail.png
+│   │       │       └── Resources
+│   │       │           └── workflowCustomImage.icns
+│   │       ├── Open in VS Code.workflow
+│   │       │   └── Contents
+│   │       │       ├── document.wflow
+│   │       │       ├── Info.plist
+│   │       │       ├── QuickLook
+│   │       │       │   └── Thumbnail.png
+│   │       │       └── Resources
+│   │       │           └── workflowCustomImage.icns
+│   │       └── Toggle Hidden Files.workflow
+│   │           └── Contents
+│   │               ├── document.wflow
+│   │               ├── Info.plist
+│   │               └── QuickLook
+│   │                   └── Thumbnail.png
+│   ├── multiple-ssh.nix
+│   └── xiphergrid2_kzones.json
 ├── flake.lock
 ├── flake.nix
 ├── LICENSE
 ├── machines
-│   ├── jade-tiger
-│   │   ├── default.nix
-│   │   ├── hardware-configuration.nix
-│   │   └── original-configuration.nix
-│   ├── master-of-cooling
-│   │   ├── default.nix
-│   │   ├── hardware-configuration.nix
-│   │   └── original-configuration.nix
-│   └── think-nix
-│       ├── default.nix
-│       ├── hardware-configuration.nix
-│       └── original-configuration.nix
+│   ├── fishbook
+│   │   └── default.nix
+│   ├── HT-RL06-PC
+│   │   ├── default.nix
+│   │   └── hardware-configuration.nix
+│   ├── jade-tiger
+│   │   ├── default.nix
+│   │   ├── hardware-configuration.nix
+│   │   └── original-configuration.nix
+│   ├── master-of-cooling
+│   │   ├── default.nix
+│   │   ├── hardware-configuration.nix
+│   │   └── original-configuration.nix
+│   └── think-nix
+│       ├── default.nix
+│       ├── hardware-configuration.nix
+│       └── original-configuration.nix
 ├── modules
-│   ├── default.nix
-│   ├── development.nix
-│   ├── entertainment.nix
-│   ├── guake.nix
-│   ├── home.nix
-│   ├── kde-home.nix
-│   ├── kde.nix
-│   ├── linux.nix
-│   ├── steamdeck-plasma-system.nix
-│   └── universal.nix
+│   ├── content-creation-obs-rtmp.nix
+│   ├── content-creation.nix
+│   ├── default.nix
+│   ├── development.nix
+│   ├── entertainment.nix
+│   ├── guake.nix
+│   ├── home.nix
+│   ├── kde-home.nix
+│   ├── kde.nix
+│   ├── linux.nix
+│   ├── living-room.nix
+│   ├── mac-home.nix
+│   ├── steamdeck-plasma-system.nix
+│   ├── universal.nix
+│   ├── xdg-librewolf-icons.nix
+│   └── xdg.nix
 ├── README.md
 ├── scripts
-│   ├── helper.py
-│   ├── setup-wizard.py
-│   └── template.py
+│   ├── helper.py
+│   ├── setup-wizard.py
+│   └── template.py
 └── users
     ├── admin.nix
     ├── bedhedd.nix
     ├── dev.nix
-    └── generic-user.nix
+    ├── developedd.nix
+    ├── generic-user.nix
+    └── progressedd.nix
 ```
 
 ## high level steps
