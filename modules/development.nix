@@ -16,7 +16,7 @@ in
     uv
     bun                             # ← Bun runtime & bunx
     git-lfs
-    nodejs_20
+    nodejs
     playwright-driver.browsers
     opencode
     gcc
