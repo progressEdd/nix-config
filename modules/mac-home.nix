@@ -26,6 +26,7 @@ in
     iterm2
     vscodium
     vscode
+    code-cursor
   ];
   # Enable Fish shell support
   programs.fish.enable = true;
